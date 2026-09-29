@@ -1,44 +1,56 @@
 ---
 layout: cv
-title: CV - Keunhong Park
+title: CV
+permalink: /cv/
 ---
 
 <!-- Header -->
 <header class="flex flex-col md:flex-row print:flex-row md:items-center print:items-center gap-6 pb-6 border-b border-border-subtle">
   <div class="flex-1">
     <h1 class="font-display text-3xl md:text-4xl font-semibold text-text">{{ site.name }}</h1>
+    {% if site.position and site.position != empty %}
     <p class="text-text-body text-lg mt-1">{{ site.position }}</p>
+    {% endif %}
   </div>
 
   <div class="text-sm text-text-body space-y-1 md:text-right print:text-right">
+    {% if site.url and site.url != empty %}
     <p>
       <a href="{{ site.url }}" class="hover:text-text no-underline">
         {% include icons/globe.html class="w-4 h-4 inline mr-1" %}
         {% assign url_parts = site.url | split: "//" %}{{ url_parts[1] }}
       </a>
     </p>
+    {% endif %}
+    {% if site.github_username and site.github_username != empty %}
     <p>
       <a href="https://github.com/{{ site.github_username }}" class="hover:text-text no-underline">
         {% include icons/github.html class="w-4 h-4 inline mr-1" %}
         {{ site.github_username }}
       </a>
     </p>
+    {% endif %}
+    {% if site.twitter_username and site.twitter_username != empty %}
     <p>
       <a href="https://twitter.com/{{ site.twitter_username }}" class="hover:text-text no-underline">
         {% include icons/twitter.html class="w-4 h-4 inline mr-1" %}
         {{ site.twitter_username }}
       </a>
     </p>
+    {% endif %}
+    {% if site.email and site.email != empty %}
     <p>
       <a href="mailto:{{ site.email }}" class="hover:text-text no-underline">
         {% include icons/envelope.html class="w-4 h-4 inline mr-1" %}
         {{ site.email }}
       </a>
     </p>
+    {% endif %}
   </div>
 </header>
 
 <!-- Education -->
+{% if site.data.education.size > 0 %}
 <section class="mt-8">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Education</h2>
   {% for school in site.data.education %}
@@ -53,8 +65,10 @@ title: CV - Keunhong Park
   </div>
   {% endfor %}
 </section>
+{% endif %}
 
 <!-- Employment -->
+{% if site.data.employment.size > 0 %}
 <section class="mt-8">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Employment</h2>
   {% for job in site.data.employment %}
@@ -70,8 +84,10 @@ title: CV - Keunhong Park
   </div>
   {% endfor %}
 </section>
+{% endif %}
 
 <!-- Publications -->
+{% if site.data.publications.size > 0 %}
 <section class="mt-8">
   <h2 class="font-display text-2xl font-semibold text-text mb-4">Publications</h2>
   {% for publication in site.data.publications %}
@@ -101,3 +117,4 @@ title: CV - Keunhong Park
   </div>
   {% endfor %}
 </section>
+{% endif %}

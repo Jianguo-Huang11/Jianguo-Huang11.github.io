@@ -18,24 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Keunhong Park
-name: Keunhong Park
-position: Research Scientist
-email: gsmv8rlm8@mozmail.com
-description: |
-  I am a founding member at [World Labs](https://www.worldlabs.ai/blog) where I lead the pre-training team. I recently led the development of [Atlas](https://www.worldlabs.ai/blog/atlas), a multi-modal world model. 
-  My research focuses on world models—from large-scale pretraining to real-time generation---combining diffusion models with 3D scene representations. 
-
-  Previously I was a research scientist at [Google](https://ai.google/research/) where 
-  I built technology to [generate 3D assets](https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/) 
-  for products on Google Search. I received my Ph.D from the [University of Washington](https://grail.cs.washington.edu/) 
-  in 2021, advised by [Ali Farhadi](https://homes.cs.washington.edu/~ali/) and [Steve Seitz](https://homes.cs.washington.edu/~seitz/).
+title: Jianguo Huang
+name: Jianguo Huang
+position: ""
+email: huangjianguo@sjtu.edu.cn
+description: ""
+# Optional portrait path, for example /images/portrait.jpg.
+portrait: ""
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://keunhong.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: KeunhongP
-github_username: keunhong
-google_scholar: HVZb-5oAAAAJ
-google_analytics: G-MFWSBLRKG0
+url: "https://jianguo-huang11.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ""
+github_username: Jianguo-Huang11
+google_scholar: ""
+google_analytics: ""
 
 # Build settings
 plugins:
