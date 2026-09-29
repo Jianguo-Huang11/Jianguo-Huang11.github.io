@@ -18,6 +18,7 @@ The build also updates `assets/css/styles.css`, a compiled fallback for GitHub P
 ## Content
 
 - `_config.yml`: name, contact links, bio, position, affiliation, and optional portrait path.
+- `_data/home_sections.yml`: homepage sections and navigation order; each section's `content` accepts Markdown. Sections with `more: true` appear in the More dropdown.
 - `_data/education.yml` and `_data/employment.yml`: CV entries.
 - `_data/publications.yml` and `_data/authors.yml`: publications and author details.
 - `_data/highlights.yml`: featured projects.
@@ -25,8 +26,8 @@ The build also updates `assets/css/styles.css`, a compiled fallback for GitHub P
 - `_posts/`: blog posts with YAML front matter.
 - `images/`: your own portraits and project media.
 
-Content collections start empty. Empty sections and unset optional links are hidden.
-The homepage uses a profile sidebar and an empty right column, ready for future content.
+Content collections start empty. Unset optional links are hidden.
+The homepage uses a profile sidebar and five sections in the right column: About, Research, Education, Award, and Service. Section headings remain visible while their content is empty.
 Update `last_updated` in `_config.yml` when editing site content; the footer displays this date in English.
 The default site URL is `https://jianguo-huang11.github.io`; add a `CNAME` only when using your own custom domain.
 

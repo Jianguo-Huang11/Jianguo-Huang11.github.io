@@ -3,17 +3,43 @@
     <nav aria-label="Main navigation">
       <ul class="site-nav">
         <li>
-          <a href="{{ '/' | relative_url }}" class="text-text-muted no-underline hover:text-text {% if page.url == '/' %}text-text font-bold{% endif %}">
+          <a href="{{ '/' | relative_url }}" class="text-text-muted no-underline hover:text-text {% if page.url == '/' %}text-text font-bold{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %}>
             Home
           </a>
         </li>
+        {% for section in site.data.home_sections %}
+        {% unless section.more %}
         <li>
-          <a href="{{ '/cv/' | relative_url }}" class="text-text-muted no-underline hover:text-text {% if page.url == '/cv/' %}text-text font-bold{% endif %}">
-            CV
+          <a href="{{ '/' | relative_url }}#{{ section.id }}" class="text-text-muted no-underline hover:text-text">
+            {{ section.title }}
           </a>
         </li>
+        {% endunless %}
+        {% endfor %}
         <li>
-          <a href="{{ '/blog/' | relative_url }}" class="text-text-muted no-underline hover:text-text {% if page.url contains '/blog' or page.layout == 'post' %}text-text font-bold{% endif %}">
+          <details id="site-nav-more" class="site-nav-more">
+            <summary class="site-nav-more-toggle">
+              More
+              <svg class="site-nav-more-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="m3 4.5 3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <ul class="site-nav-more-menu">
+              {% for section in site.data.home_sections %}
+              {% if section.more %}
+              <li>
+                <a href="{{ '/' | relative_url }}#{{ section.id }}" class="no-underline">{{ section.title }}</a>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </details>
+        </li>
+        <li class="site-nav-secondary">
+          <a href="{{ '/cv/' | relative_url }}" class="text-text-muted no-underline hover:text-text {% if page.url == '/cv/' %}text-text font-bold{% endif %}" {% if page.url == '/cv/' %}aria-current="page"{% endif %}>
+            CV
+          </a>
+          <a href="{{ '/blog/' | relative_url }}" class="text-text-muted no-underline hover:text-text {% if page.url contains '/blog' or page.layout == 'post' %}text-text font-bold{% endif %}" {% if page.url contains '/blog' or page.layout == 'post' %}aria-current="page"{% endif %}>
             Blog
           </a>
         </li>
