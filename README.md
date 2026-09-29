@@ -13,6 +13,8 @@ bundle exec jekyll serve
 
 Open `http://127.0.0.1:4000` to preview the site. Restart the server after editing `_config.yml`.
 
+The build also updates `assets/css/styles.css`, a compiled fallback for GitHub Pages builds that skip custom plugins. Commit this file whenever a build changes it. Local builds continue to compile `_tailwind.css` automatically.
+
 ## Content
 
 - `_config.yml`: name, contact links, bio, position, affiliation, and optional portrait path.
