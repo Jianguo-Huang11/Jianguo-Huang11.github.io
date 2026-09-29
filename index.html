@@ -1,88 +1,63 @@
 ---
-layout: default
+layout: home
 ---
 
-<!-- Hero Section -->
-<section class="py-12 md:py-16 bg-surface">
-  <div class="max-w-4xl mx-auto px-6">
-    <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start gap-8">
-      <!-- Portrait -->
-      {% if site.portrait and site.portrait != empty %}
-      <div class="flex-shrink-0">
-        <img src="{{ site.portrait | relative_url }}"
-             alt="{{ site.name }}"
-             class="w-48 h-48 md:w-56 md:h-56 object-cover">
-      </div>
+<div class="homepage-grid">
+  <aside class="profile-sidebar" aria-label="Profile">
+    {% if site.portrait and site.portrait != empty %}
+    <img src="{{ site.portrait | relative_url }}"
+         alt="Portrait of {{ site.name }}"
+         width="2378" height="3978"
+         class="profile-portrait" decoding="async">
+    {% endif %}
+
+    <h1 class="profile-name">{{ site.name }}</h1>
+    {% if site.name_zh and site.name_zh != empty %}
+    <p class="profile-name-zh" lang="zh-CN">{{ site.name_zh }}</p>
+    {% endif %}
+
+    {% if site.position and site.position != empty %}
+    <p class="profile-position">{{ site.position }}</p>
+    {% endif %}
+    {% if site.affiliation and site.affiliation != empty %}
+    <p class="profile-affiliation">{{ site.affiliation }}</p>
+    {% endif %}
+    {% if site.research_interests and site.research_interests != empty %}
+    <p class="profile-intro">{{ site.research_interests }}</p>
+    {% endif %}
+    {% if site.description and site.description != empty %}
+    <div class="profile-intro">{{ site.description | markdownify }}</div>
+    {% endif %}
+
+    <nav class="profile-links" aria-label="Contact and academic profiles">
+      {% if site.email and site.email != empty %}
+      <a href="mailto:{{ site.email }}" class="profile-link no-underline">
+        <span class="profile-link-label">
+          {% include icons/envelope.html class="profile-link-icon" %}
+          Email
+        </span>
+      </a>
       {% endif %}
 
-      <!-- Bio -->
-      <div class="flex-1">
-        <h1 class="font-display text-3xl md:text-4xl font-semibold text-text">
-          Hello, I'm {{ site.name }}
-        </h1>
-        {% if site.description and site.description != empty %}
-        <div class="text-text-body mt-4 max-w-prose leading-relaxed prose">
-          {{ site.description | markdownify }}
-        </div>
-        {% endif %}
+      {% if site.google_scholar and site.google_scholar != empty %}
+      <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}&amp;hl=zh-CN" class="profile-link no-underline">
+        <span class="profile-link-label">
+          <i class="ai ai-google-scholar profile-link-icon" aria-hidden="true"></i>
+          Google Scholar
+        </span>
+      </a>
+      {% endif %}
 
-        <!-- Links -->
-        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
-          <a href="{{ '/cv/' | relative_url }}" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
-            {% include icons/file.html class="w-4 h-4 mr-1.5" %}
-            CV
-          </a>
+      {% if site.github_username and site.github_username != empty %}
+      <a href="https://github.com/{{ site.github_username }}" class="profile-link no-underline">
+        <span class="profile-link-label">
+          {% include icons/github.html class="profile-link-icon" %}
+          GitHub
+        </span>
+      </a>
+      {% endif %}
+    </nav>
+  </aside>
 
-          {% if site.google_scholar and site.google_scholar != empty %}
-          <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
-            <i class="ai ai-google-scholar mr-1.5"></i>
-            Scholar
-          </a>
-          {% endif %}
-
-          {% if site.github_username and site.github_username != empty %}
-          <a href="https://github.com/{{ site.github_username }}" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
-            {% include icons/github.html class="w-4 h-4 mr-1.5" %}
-            GitHub
-          </a>
-          {% endif %}
-
-          {% if site.twitter_username and site.twitter_username != empty %}
-          <a href="https://twitter.com/{{ site.twitter_username }}" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
-            {% include icons/twitter.html class="w-4 h-4 mr-1.5" %}
-            Twitter
-          </a>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Highlights Section -->
-{% if site.data.highlights.size > 0 %}
-<section class="relative py-12 md:py-16">
-  <!-- Background with faded edges -->
-  <div class="absolute inset-0 bg-surface-muted" style="mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);"></div>
-  <div class="relative max-w-4xl mx-auto px-6">
-    <h2 class="font-display text-2xl font-semibold text-text mb-8">Highlights</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {% for highlight in site.data.highlights %}
-        {% include highlight.html h=highlight %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-<!-- Publications Section -->
-{% if site.data.publications.size > 0 %}
-<section class="py-12 md:py-16 bg-surface">
-  <div class="max-w-4xl mx-auto px-6">
-    <h2 class="font-display text-2xl font-semibold text-text mb-8">Publications</h2>
-    {% for pub in site.data.publications %}
-      {% include publication.html pub=pub %}
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
+  <div class="homepage-content"></div>
+</div>

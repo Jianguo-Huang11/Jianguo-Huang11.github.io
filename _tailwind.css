@@ -96,6 +96,218 @@
   color: var(--color-link-hover);
 }
 
+/* Shared navigation and the homepage's profile sidebar. */
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.site-nav-shell {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  min-height: 72px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  list-style: none;
+}
+
+.homepage-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+.homepage {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 64px 32px 48px;
+}
+
+.homepage-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  align-items: start;
+  gap: 64px;
+}
+
+.profile-sidebar {
+  position: sticky;
+  top: 40px;
+  text-align: center;
+}
+
+.profile-portrait {
+  display: block;
+  width: 160px;
+  height: auto;
+  margin-inline: auto;
+  border-radius: 4px;
+  box-shadow:
+    0 0 0 5px var(--color-surface),
+    0 0 0 6px rgb(23 23 23 / 6%),
+    0 6px 16px rgb(23 23 23 / 9%),
+    0 18px 36px rgb(23 23 23 / 8%);
+}
+
+.profile-name {
+  margin-top: 24px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.profile-name-zh {
+  margin-top: 6px;
+  color: var(--color-text-muted);
+  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.profile-position {
+  margin-top: 16px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.profile-affiliation {
+  margin-top: 4px;
+  color: var(--color-text-body);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.profile-intro {
+  margin-top: 12px;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.profile-intro p + p {
+  margin-top: 8px;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+}
+
+.profile-link {
+  max-width: 100%;
+  padding-inline: 26px;
+}
+
+.profile-link-label {
+  position: relative;
+  display: block;
+  color: var(--color-text-body);
+  font-weight: 600;
+}
+
+.profile-link-icon {
+  position: absolute;
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.profile-link:hover .profile-link-label {
+  color: var(--color-text);
+}
+
+.site-nav a:focus-visible,
+.profile-link:focus-visible {
+  outline: 2px solid var(--color-text-muted);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+.homepage-content {
+  min-width: 0;
+}
+
+.site-footer-meta {
+  margin-top: 16px;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.site-footer-meta p + p {
+  margin-top: 3px;
+}
+
+.site-footer--compact {
+  border-top: 1px solid var(--color-border-subtle);
+  padding: 18px 24px 24px;
+}
+
+.site-footer--compact .site-footer-meta {
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .site-nav-shell {
+    padding-inline: 24px;
+  }
+
+  .site-nav {
+    min-height: 60px;
+    gap: 28px;
+    font-size: 15px;
+  }
+
+  .homepage {
+    padding: 40px 24px 48px;
+  }
+
+  .homepage-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .profile-sidebar {
+    position: static;
+    width: 100%;
+    max-width: 280px;
+    margin-inline: auto;
+  }
+
+  .profile-portrait {
+    width: 136px;
+  }
+
+  .profile-name {
+    font-size: 32px;
+  }
+}
+
 /* Print styles */
 @media print {
   html, body {

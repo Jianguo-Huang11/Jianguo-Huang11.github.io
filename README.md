@@ -15,7 +15,7 @@ Open `http://127.0.0.1:4000` to preview the site. Restart the server after editi
 
 ## Content
 
-- `_config.yml`: name, contact links, bio, position, and optional portrait path.
+- `_config.yml`: name, contact links, bio, position, affiliation, and optional portrait path.
 - `_data/education.yml` and `_data/employment.yml`: CV entries.
 - `_data/publications.yml` and `_data/authors.yml`: publications and author details.
 - `_data/highlights.yml`: featured projects.
@@ -24,6 +24,8 @@ Open `http://127.0.0.1:4000` to preview the site. Restart the server after editi
 - `images/`: your own portraits and project media.
 
 Content collections start empty. Empty sections and unset optional links are hidden.
+The homepage uses a profile sidebar and an empty right column, ready for future content.
+Update `last_updated` in `_config.yml` when editing site content; the footer displays this date in English.
 The default site URL is `https://jianguo-huang11.github.io`; add a `CNAME` only when using your own custom domain.
 
 ## License
