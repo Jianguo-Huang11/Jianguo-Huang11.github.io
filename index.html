@@ -64,7 +64,22 @@ layout: home
     <section id="{{ section.id }}" class="homepage-section{% if section.id == 'about' %} homepage-section--about{% endif %}" aria-labelledby="{{ section.id }}-title">
       <h2 id="{{ section.id }}-title" class="{% if section.id == 'about' %}sr-only{% else %}homepage-section-title{% endif %}">{{ section.title }}</h2>
       <div class="homepage-section-body prose max-w-none">
-        {% if section.items %}
+        {% if section.education_items %}
+        <ul class="education-list">
+          {% for entry in section.education_items %}
+          <li class="education-item">
+            <img src="{{ entry.logo | relative_url }}" alt="" class="education-logo" width="56" height="56" loading="lazy" decoding="async">
+            <div class="education-content">
+              <div class="education-heading">
+                <h3 class="education-institution">{{ entry.school }}</h3>
+                <span class="education-dates">{{ entry.dates }}</span>
+              </div>
+              <p class="education-description">{{ entry.details }}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        {% elsif section.items %}
         {% include awards-list.html items=section.items %}
         {% if section.more_items %}
         <details class="awards-more">

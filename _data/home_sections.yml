@@ -11,7 +11,15 @@
   content: ""
 - id: education
   title: Education
-  content: ""
+  education_items:
+    - school: Shanghai Jiao Tong University
+      logo: /images/education/sjtu-seal.png
+      details: Ph.D. Student
+      dates: "2025.09 – Present"
+    - school: Dalian University of Technology
+      logo: /images/education/dut-seal.svg
+      details: "B.Eng. · DUT-IR Lab · Top 2.4%"
+      dates: "2021.09 – 2025.06"
 - id: award
   title: Awards
   items:
