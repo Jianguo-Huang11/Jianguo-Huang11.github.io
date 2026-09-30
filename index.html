@@ -61,8 +61,8 @@ layout: home
 
   <div class="homepage-content">
     {% for section in site.data.home_sections %}
-    <section id="{{ section.id }}" class="homepage-section" aria-labelledby="{{ section.id }}-title">
-      <h2 id="{{ section.id }}-title" class="homepage-section-title">{{ section.title }}</h2>
+    <section id="{{ section.id }}" class="homepage-section{% if section.id == 'about' %} homepage-section--about{% endif %}" aria-labelledby="{{ section.id }}-title">
+      <h2 id="{{ section.id }}-title" class="{% if section.id == 'about' %}sr-only{% else %}homepage-section-title{% endif %}">{{ section.title }}</h2>
       <div class="homepage-section-body prose max-w-none">
         {{ section.content | markdownify }}
       </div>

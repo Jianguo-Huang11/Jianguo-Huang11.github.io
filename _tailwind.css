@@ -341,6 +341,14 @@
   padding-top: 20px;
 }
 
+.homepage-section--about .homepage-section-body {
+  padding-top: 0;
+}
+
+.homepage-section--about .homepage-section-body > :first-child {
+  margin-top: 0;
+}
+
 .site-footer-meta {
   margin-top: 16px;
   color: var(--color-text-muted);
