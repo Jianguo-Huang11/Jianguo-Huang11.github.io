@@ -32,7 +32,7 @@
       date: "2022.10"
     - name: "Dalian University of Technology Innovation and Technology Scholarship (Top 4%)"
       date: "2022, 2023, 2024"
-  more_summary: "Competition awards: 5 national-level, 1 international-level, and 3 selected provincial-level."
+  more_summary: "Competition awards: 3 national-level and 3 selected provincial-level."
   more_items:
     - name: "iCAN Innovation Contest"
       result: National Third Prize
@@ -53,9 +53,9 @@
       result: Liaoning Provincial Grand Prize
       date: "2023.06"
     - name: "First Prize Scholarship, Dalian University of Technology (Awarded to top 3-5% students in academic performance)"
-      date: "2022"
+      date: "2022.10"
     - name: "University-Level Merit Student, Dalian University of Technology"
-      date: "2022"
+      date: "2022.10"
 - id: service
   title: Service
   content: |
