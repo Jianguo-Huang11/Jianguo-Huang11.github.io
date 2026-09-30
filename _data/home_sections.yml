@@ -14,7 +14,22 @@
   content: ""
 - id: award
   title: Awards
-  content: ""
+  items:
+    - name: "VCIP 2025 Ultra Low Bitrate Video Compression Challenge, 50 kbps Track"
+      result: Champion
+      date: "2025.10"
+    - name: "Outstanding Graduate of Liaoning Province"
+      date: "2025.06"
+    - name: "The 14th \"Challenge Cup\" National College Students' Entrepreneurship Competition"
+      result: National Second Prize
+      date: "2024.11"
+    - name: "The 17th China College Students' Computer Design Competition"
+      result: National Second Prize
+      date: "2024.07"
+    - name: "National Scholarship (Top 1%) — Ministry of Education"
+      date: "2022.10"
+    - name: "Dalian University of Technology Innovation and Technology Scholarship (Top 4%)"
+      date: "2021–2022, 2022–2023, 2023–2024"
 - id: service
   title: Service
   content: |

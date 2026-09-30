@@ -294,6 +294,32 @@
   margin-top: 0;
 }
 
+.homepage-section-body .awards-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.award-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  align-items: baseline;
+  gap: 20px;
+  padding: 0;
+}
+
+.award-item + .award-item {
+  margin-top: 12px;
+}
+
+.award-date {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: right;
+}
+
 .site-footer-meta {
   margin-top: 16px;
   color: var(--color-text-muted);
@@ -339,6 +365,11 @@
 
   .homepage-section-title {
     font-size: 24px;
+  }
+
+  .award-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
   }
 
   .homepage {
