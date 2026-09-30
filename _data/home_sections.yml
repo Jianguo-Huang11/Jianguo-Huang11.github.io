@@ -11,13 +11,10 @@
   content: ""
 - id: education
   title: Education
-  more: true
   content: ""
 - id: award
-  title: Award
-  more: true
+  title: Awards
   content: ""
 - id: service
   title: Service
-  more: true
   content: ""
