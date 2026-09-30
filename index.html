@@ -68,7 +68,7 @@ layout: home
         <ul class="awards-list">
           {% for award in section.items %}
           <li class="award-item">
-            <span class="award-description">{{ award.name }}{% if award.result %} — <strong>{{ award.result }}</strong>{% endif %}</span>
+            <span class="award-description">{% if award.url %}<a href="{{ award.url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}{% if award.track %}, {{ award.track }}{% endif %}{% if award.result %} — {{ award.result }}{% endif %}</span>
             <span class="award-date">{{ award.date }}</span>
           </li>
           {% endfor %}
