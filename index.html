@@ -65,14 +65,14 @@ layout: home
       <h2 id="{{ section.id }}-title" class="{% if section.id == 'about' %}sr-only{% else %}homepage-section-title{% endif %}">{{ section.title }}</h2>
       <div class="homepage-section-body prose max-w-none">
         {% if section.items %}
-        <ul class="awards-list">
-          {% for award in section.items %}
-          <li class="award-item">
-            <span class="award-description">{% if award.url %}<a href="{{ award.url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}{% if award.track %}, {{ award.track }}{% endif %}{% if award.result %} — {{ award.result }}{% endif %}</span>
-            <span class="award-date">{{ award.date }}</span>
-          </li>
-          {% endfor %}
-        </ul>
+        {% include awards-list.html items=section.items %}
+        {% if section.more_items %}
+        <details class="awards-more">
+          <summary class="awards-more-toggle">More</summary>
+          {% if section.more_summary %}<p class="awards-more-summary">{{ section.more_summary }}</p>{% endif %}
+          {% include awards-list.html items=section.more_items %}
+        </details>
+        {% endif %}
         {% else %}
         {{ section.content | markdownify }}
         {% endif %}

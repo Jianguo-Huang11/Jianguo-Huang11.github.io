@@ -32,6 +32,30 @@
       date: "2022.10"
     - name: "Dalian University of Technology Innovation and Technology Scholarship (Top 4%)"
       date: "2022, 2023, 2024"
+  more_summary: "Competition awards: 5 national-level, 1 international-level, and 3 selected provincial-level."
+  more_items:
+    - name: "iCAN Innovation Contest"
+      result: National Third Prize
+      date: "2024.12"
+    - name: "2024 University Computer Competition, Internet Technology Challenge"
+      result: National Third Prize
+      date: "2024.09"
+    - name: "China TRIZ Cup College Students’ Innovation Method Competition"
+      result: National Second Prize
+      date: "2024.09"
+    - name: "The 2024 China International College Students Innovation Competition"
+      result: Liaoning Provincial Gold Prize
+      date: "2024.08"
+    - name: "Challenge Cup College Students’ Entrepreneurship Plan Competition"
+      result: Liaoning Provincial Grand Prize
+      date: "2024.07"
+    - name: "Challenge Cup College Students’ Extracurricular Academic Science and Technology Works Competition"
+      result: Liaoning Provincial Grand Prize
+      date: "2023.06"
+    - name: "First Prize Scholarship, Dalian University of Technology (Awarded to top 3-5% students in academic performance)"
+      date: "2022"
+    - name: "University-Level Merit Student, Dalian University of Technology"
+      date: "2022"
 - id: service
   title: Service
   content: |

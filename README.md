@@ -18,7 +18,7 @@ The build also updates `assets/css/styles.css`, a compiled fallback for GitHub P
 ## Content
 
 - `_config.yml`: name, contact links, bio, position, affiliation, and optional portrait path.
-- `_data/home_sections.yml`: homepage sections and navigation order; section `content` accepts Markdown, and Awards uses dated `items`.
+- `_data/home_sections.yml`: homepage sections and navigation order; section `content` accepts Markdown, and Awards uses dated `items` plus optional collapsed `more_items`.
 - `_data/education.yml` and `_data/employment.yml`: CV entries.
 - `_data/publications.yml` and `_data/authors.yml`: publications and author details.
 - `_data/highlights.yml`: featured projects.

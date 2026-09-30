@@ -320,6 +320,60 @@
   text-align: right;
 }
 
+.awards-more {
+  margin-top: 18px;
+}
+
+.awards-more-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-link);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  list-style: none;
+}
+
+.awards-more-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.awards-more-toggle::after {
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  content: "";
+  transform: rotate(45deg);
+  transition: transform 150ms ease;
+}
+
+.awards-more[open] .awards-more-toggle::after {
+  transform: rotate(225deg);
+}
+
+.awards-more-toggle:focus-visible {
+  outline: 2px solid var(--color-text-muted);
+  outline-offset: 4px;
+}
+
+.awards-more .awards-list {
+  margin-top: 16px;
+}
+
+.awards-more .awards-more-summary {
+  margin: 12px 0 8px;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 14px;
+}
+
+.awards-more-summary + .awards-list {
+  margin-top: 0;
+}
+
 .site-footer-meta {
   margin-top: 16px;
   color: var(--color-text-muted);
