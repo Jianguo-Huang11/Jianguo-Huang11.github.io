@@ -74,7 +74,7 @@ layout: home
                 <h3 class="education-institution">{{ entry.school }}</h3>
                 <span class="education-dates">{{ entry.dates }}</span>
               </div>
-              <p class="education-description">{{ entry.details }}</p>
+              <p class="education-description">{{ entry.degree }} · <a href="{{ entry.lab_url }}">{{ entry.lab }}</a>{% if entry.rank %} · {{ entry.rank }}{% endif %}</p>
             </div>
           </li>
           {% endfor %}

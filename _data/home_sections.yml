@@ -14,11 +14,16 @@
   education_items:
     - school: Shanghai Jiao Tong University
       logo: /images/education/sjtu-seal.png
-      details: Ph.D. Student
+      degree: Ph.D. Student in Computer Science and Technology
+      lab: IMVC Lab
+      lab_url: https://eit-imvclab.net/
       dates: "2025.09 – Present"
     - school: Dalian University of Technology
       logo: /images/education/dut-seal.svg
-      details: "B.Eng. · DUT-IR Lab · Top 2.4%"
+      degree: B.Eng. in Computer Science and Technology
+      lab: DUT-IR Lab
+      lab_url: https://ir.dlut.edu.cn/index.htm
+      rank: Top 2.4%
       dates: "2021.09 – 2025.06"
 - id: award
   title: Awards
