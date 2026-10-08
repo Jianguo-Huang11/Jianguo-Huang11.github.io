@@ -154,9 +154,15 @@
   gap: 64px;
 }
 
-.profile-sidebar {
+.profile-sidebar-anchor {
   position: sticky;
   top: 112px;
+  /* Keep the profile independent of the changing bottom edge of the content. */
+  height: 0;
+  overflow-anchor: none;
+}
+
+.profile-sidebar {
   text-align: center;
 }
 
@@ -884,8 +890,12 @@
     gap: 40px;
   }
 
-  .profile-sidebar {
+  .profile-sidebar-anchor {
     position: static;
+    height: auto;
+  }
+
+  .profile-sidebar {
     width: 100%;
     max-width: 280px;
     margin-inline: auto;

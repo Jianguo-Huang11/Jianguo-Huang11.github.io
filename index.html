@@ -3,6 +3,7 @@ layout: home
 ---
 
 <div class="homepage-grid">
+  <div class="profile-sidebar-anchor">
   <aside class="profile-sidebar" aria-label="Profile">
     {% if site.portrait and site.portrait != empty %}
     <img src="{{ site.portrait | relative_url }}"
@@ -58,6 +59,7 @@ layout: home
       {% endif %}
     </nav>
   </aside>
+  </div>
 
   <div class="homepage-content">
     {% for section in site.data.home_sections %}
