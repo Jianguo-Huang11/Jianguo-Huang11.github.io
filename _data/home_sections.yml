@@ -70,15 +70,14 @@
     - title: "IPEval: A Bilingual Intellectual Property Agency Consultation Evaluation Benchmark for Large Language Models"
       authors:
         - Qiyao Wang
-        - Hongbo Wang
         - Jianguo Huang
         - Shule Lu
         - Yuan Lin
         - Kan Xu
         - Liang Yang
         - Hongfei Lin
-      venue: Journal of Artificial Intelligence Research, vol. 2, no. 1, pp. 9–27, 2025
-      url: https://sub.ifspress.hk/JAIR/article/view/162
+      venue: Journal of Artificial Intelligence Research, 2025
+      url: https://arxiv.org/abs/2406.12386v1
     - title: Federated Unlearning With Momentum Degradation
       authors:
         - Yian Zhao
@@ -87,7 +86,7 @@
         - Jianguo Huang
         - Zongzheng Wei
         - Qiang Zhang
-      venue: IEEE Internet of Things Journal, vol. 11, no. 5, pp. 8860–8870, 2024
+      venue: IEEE Internet of Things Journal, 2024
       url: https://ieeexplore.ieee.org/abstract/document/10269017
 - id: education
   title: Education
