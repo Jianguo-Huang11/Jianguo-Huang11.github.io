@@ -66,6 +66,51 @@
             - label: Paper
               icon: document
               url: https://arxiv.org/pdf/2605.17921
+    - name: Token Compression & Visual Coding
+      papers:
+        - title: Revisiting MLLM Token Technology through the Lens of Classical Visual Coding
+          image: /images/research/mllm-token-visual-coding.png
+          image_alt: Comparison of the visual coding and MLLM token processing pipelines
+          image_width: 2117
+          image_height: 1175
+          authors:
+            - Jinming Liu
+            - Junyan Lin
+            - Yuntao Wei
+            - Kele Shao
+            - Keda Tao
+            - Jianguo Huang
+            - Xudong Yang
+            - Zhibo Chen
+            - Huan Wang
+            - Xin Jin
+          equal_authors: 3
+          venue: IEEE International Symposium on Circuits and Systems (ISCAS 2026)
+          status: CCF-B
+          links:
+            - label: Paper
+              icon: document
+              url: https://arxiv.org/pdf/2508.13460
+        - title: "Compression Tells Intelligence: Visual Coding, Visual Token Technology, and the Unification"
+          image: /images/research/compression-tells-intelligence.png
+          image_alt: Overview of classical visual coding, visual token technology, and their unified perspective
+          image_width: 2169
+          image_height: 1119
+          authors:
+            - Xin Jin
+            - Jinming Liu
+            - Yuntao Wei
+            - Junyan Lin
+            - Zhicheng Wang
+            - Jianguo Huang
+            - Xudong Yang
+            - Yanxiao Liu
+            - Wenjun Zeng
+          status: Preprint
+          links:
+            - label: Paper
+              icon: document
+              url: https://arxiv.org/pdf/2601.20742
   undergraduate_papers:
     - title: "IPEval: A Bilingual Intellectual Property Agency Consultation Evaluation Benchmark for Large Language Models"
       authors:

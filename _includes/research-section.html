@@ -1,7 +1,7 @@
 <div class="research-topics">
   {% for topic in include.section.research_topics %}
   <section class="research-topic" aria-labelledby="research-topic-{{ forloop.index }}">
-    <h3 id="research-topic-{{ forloop.index }}" class="research-topic-title">{{ topic.name }}</h3>
+    <h3 id="research-topic-{{ forloop.index }}" class="research-topic-title">{{ topic.name | escape }}</h3>
     <div class="research-paper-list">
       {% for paper in topic.papers %}
       <article class="research-paper">
@@ -16,9 +16,10 @@
         <div class="research-paper-content">
           <h4 class="research-paper-title">{{ paper.title }}</h4>
           <p class="research-paper-authors">
-            {% for author in paper.authors %}{% if author == site.name %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% if forloop.index <= paper.equal_authors %}<sup aria-label="equal contribution">*</sup>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+            {% for author in paper.authors %}{% if author == site.name %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% if paper.equal_authors %}{% if forloop.index <= paper.equal_authors %}<sup aria-label="equal contribution">*</sup>{% endif %}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
           </p>
           {% if paper.equal_authors %}<p class="research-paper-note">* Equal contribution.</p>{% endif %}
+          {% if paper.venue %}<p class="research-paper-venue">{{ paper.venue }}</p>{% endif %}
           <div class="research-paper-meta">
             <span class="research-status">{{ paper.status }}</span>
             <nav class="research-links" aria-label="Links for {{ paper.title }}">
