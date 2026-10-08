@@ -3,7 +3,7 @@
   content: |
     I am currently a second-year Ph.D. student at Shanghai Jiao Tong University, supervised by [Wenjun Zeng](https://scholar.google.com/citations?user=_cUfvYQAAAAJ&hl=zh-CN&oi=sra) and [Xin Jin](https://scholar.google.com/citations?hl=zh-CN&user=byaSC-kAAAAJ). Before that, I earned my B.Eng. degree from Dalian University of Technology.
 
-    My research focuses on multimodal language models, particularly streaming and long-video understanding. My long-term goal is to build an always-on personal video assistant with real-time perception, long-term memory, and continuous interaction. I am also interested in agents, unified models, and representation compression.
+    My research focuses on multimodal language models, particularly **streaming and long-video understanding**. My long-term goal is to build an always-on personal video assistant with real-time perception, long-term memory, and continuous interaction. I am also interested in **agents**, unified models, and representation compression.
 
     I am always open to collaboration—feel free to [get in touch](mailto:huangjianguo@sjtu.edu.cn) 😊
 - id: research
@@ -84,7 +84,7 @@
             - Zhibo Chen
             - Huan Wang
             - Xin Jin
-          equal_authors: 3
+          abbreviated_authors: true
           venue: IEEE International Symposium on Circuits and Systems (ISCAS 2026)
           status: CCF-B
           links:
@@ -106,6 +106,7 @@
             - Xudong Yang
             - Yanxiao Liu
             - Wenjun Zeng
+          abbreviated_authors: true
           status: Preprint
           links:
             - label: Paper
@@ -121,7 +122,7 @@
         - Kan Xu
         - Liang Yang
         - Hongfei Lin
-      venue: Journal of Artificial Intelligence Research, 2025
+      venue: Journal of Artificial Intelligence Research, vol. 2, no. 1, pp. 9–27, 2025
       url: https://arxiv.org/abs/2406.12386v1
     - title: Federated Unlearning With Momentum Degradation
       authors:
@@ -131,7 +132,7 @@
         - Jianguo Huang
         - Zongzheng Wei
         - Qiang Zhang
-      venue: IEEE Internet of Things Journal, 2024
+      venue: IEEE Internet of Things Journal, vol. 11, no. 5, pp. 8860–8870, 2024
       url: https://ieeexplore.ieee.org/abstract/document/10269017
 - id: education
   title: Education
@@ -156,6 +157,7 @@
       url: "https://unoc-727.github.io/VCIP_Challenge_ULBVC.github.io/"
       track: "50 kbps Track"
       result: "Champion, first contributor"
+      emphasize_result: true
       date: "2025.10"
     - name: "Outstanding Graduate of Liaoning Province"
       date: "2025.06"

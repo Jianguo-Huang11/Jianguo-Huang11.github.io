@@ -1,7 +1,7 @@
 <ul class="awards-list">
   {% for award in include.items %}
   <li class="award-item">
-    <span class="award-description">{% if award.url %}<a href="{{ award.url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}{% if award.track %}, {{ award.track }}{% endif %}{% if award.result %} — {{ award.result }}{% endif %}</span>
+    <span class="award-description">{% if award.url %}<a href="{{ award.url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}{% if award.track %}, {{ award.track }}{% endif %}{% if award.result %} — {% if award.emphasize_result %}<strong>{{ award.result }}</strong>{% else %}{{ award.result }}{% endif %}{% endif %}</span>
     <span class="award-date">{{ award.date }}</span>
   </li>
   {% endfor %}
