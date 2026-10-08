@@ -1,0 +1,58 @@
+<div class="research-topics">
+  {% for topic in include.section.research_topics %}
+  <section class="research-topic" aria-labelledby="research-topic-{{ forloop.index }}">
+    <h3 id="research-topic-{{ forloop.index }}" class="research-topic-title">{{ topic.name }}</h3>
+    <div class="research-paper-list">
+      {% for paper in topic.papers %}
+      <article class="research-paper">
+        <div class="research-paper-figure">
+          <img src="{{ paper.image | relative_url }}"
+               alt="{{ paper.image_alt }}"
+               width="{{ paper.image_width }}"
+               height="{{ paper.image_height }}"
+               loading="lazy"
+               decoding="async">
+        </div>
+        <div class="research-paper-content">
+          <h4 class="research-paper-title">{{ paper.title }}</h4>
+          <p class="research-paper-authors">
+            {% for author in paper.authors %}{% if author == site.name %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% if forloop.index <= paper.equal_authors %}<sup aria-label="equal contribution">*</sup>{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+          </p>
+          {% if paper.equal_authors %}<p class="research-paper-note">* Equal contribution.</p>{% endif %}
+          <div class="research-paper-meta">
+            <span class="research-status">{{ paper.status }}</span>
+            <nav class="research-links" aria-label="Links for {{ paper.title }}">
+              {% for link in paper.links %}
+              <a href="{{ link.url }}" class="research-link no-underline">
+                {% if link.icon == 'document' %}{% include icons/document.html class="research-link-icon" %}
+                {% elsif link.icon == 'github' %}{% include icons/github.html class="research-link-icon" %}
+                {% elsif link.icon == 'globe' %}{% include icons/globe.html class="research-link-icon" %}
+                {% elsif link.icon == 'database' %}{% include icons/database.html class="research-link-icon" %}
+                {% endif %}
+                <span>{{ link.label }}</span>
+              </a>
+              {% endfor %}
+            </nav>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+
+  {% if include.section.undergraduate_papers %}
+  <details class="undergraduate-work">
+    <summary class="undergraduate-work-toggle">Undergraduate Work</summary>
+    <div class="undergraduate-paper-list">
+      {% for paper in include.section.undergraduate_papers %}
+      <article class="undergraduate-paper">
+        <h4 class="undergraduate-paper-title"><a href="{{ paper.url }}">{{ paper.title }}</a></h4>
+        <p class="undergraduate-paper-authors">{% for author in paper.authors %}{% if author == site.name %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+        <p class="undergraduate-paper-venue">{{ paper.venue }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </details>
+  {% endif %}
+</div>

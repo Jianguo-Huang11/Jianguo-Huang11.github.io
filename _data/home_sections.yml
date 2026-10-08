@@ -8,7 +8,87 @@
     I am always open to collaboration—feel free to [get in touch](mailto:huangjianguo@sjtu.edu.cn) 😊
 - id: research
   title: Research
-  content: ""
+  research_topics:
+    - name: Streaming Video Understanding
+      papers:
+        - title: "APM-Bench: Benchmarking Cross-Session Persistent Memory for Real-World Egocentric Streaming Video Assistants"
+          image: /images/research/apm-bench.png
+          image_alt: "APM-Bench overview comparing continuous-video evaluation with persistent memory across multiple sessions"
+          image_width: 1970
+          image_height: 948
+          authors:
+            - Jianguo Huang
+            - Jinming Liu
+            - Qiyao Wang
+            - Liang Xu
+            - Jianhang Li
+            - Zhimian Wen
+            - Mingda Li
+            - Shule Lu
+            - Zhicheng Wang
+            - Yuhan Guo
+            - Xin Jin
+            - Wenjun Zeng
+          equal_authors: 2
+          status: Preprint
+          links:
+            - label: Paper
+              icon: document
+              url: https://arxiv.org/pdf/2609.37559
+            - label: Code
+              icon: github
+              url: https://github.com/Jianguo-Huang11/APM-Bench/tree/main
+            - label: Project
+              icon: globe
+              url: https://jianguo-huang11.github.io/APM-Bench/
+            - label: Dataset
+              icon: database
+              url: https://huggingface.co/datasets/Jianguo-Huang11/APM-Bench
+        - title: An Efficient Streaming Video Understanding Framework with Agentic Control
+          image: /images/research/r3-streaming.png
+          image_alt: "R3-Streaming overview of remembering, responding, and reasoning in a streaming video assistant"
+          image_width: 1730
+          image_height: 860
+          authors:
+            - Jinming Liu
+            - Jianguo Huang
+            - Zhaoyang Jia
+            - Jiahao Li
+            - Xiaoyi Zhang
+            - Zongyu Guo
+            - Bin Li
+            - Wenjun Zeng
+            - Yan Lu
+            - Xin Jin
+          equal_authors: 2
+          status: Preprint
+          links:
+            - label: Paper
+              icon: document
+              url: https://arxiv.org/pdf/2605.17921
+  undergraduate_papers:
+    - title: "IPEval: A Bilingual Intellectual Property Agency Consultation Evaluation Benchmark for Large Language Models"
+      authors:
+        - Qiyao Wang
+        - Hongbo Wang
+        - Jianguo Huang
+        - Shule Lu
+        - Yuan Lin
+        - Kan Xu
+        - Liang Yang
+        - Hongfei Lin
+      venue: Journal of Artificial Intelligence Research, vol. 2, no. 1, pp. 9–27, 2025
+      url: https://sub.ifspress.hk/JAIR/article/view/162
+    - title: Federated Unlearning With Momentum Degradation
+      authors:
+        - Yian Zhao
+        - Pengfei Wang
+        - Heng Qi
+        - Jianguo Huang
+        - Zongzheng Wei
+        - Qiang Zhang
+      venue: IEEE Internet of Things Journal, vol. 11, no. 5, pp. 8860–8870, 2024
+      url: https://ieeexplore.ieee.org/abstract/document/10269017
 - id: education
   title: Education
   education_items:
