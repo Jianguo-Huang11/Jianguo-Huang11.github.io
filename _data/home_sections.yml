@@ -1,9 +1,9 @@
 - id: about
   title: About
   content: |
-    I am currently a second-year Ph.D. student at Shanghai Jiao Tong University, supervised by [Wenjun Zeng](https://scholar.google.com/citations?user=_cUfvYQAAAAJ&hl=zh-CN&oi=sra) and [Xin Jin](https://scholar.google.com/citations?hl=zh-CN&user=byaSC-kAAAAJ). Before that, I earned my B.Eng. degree from Dalian University of Technology.
+    I am currently a second-year Ph.D. student at Shanghai Jiao Tong University. Before that, I earned my B.Eng. degree from Dalian University of Technology.
 
-    My research focuses on multimodal language models, particularly **streaming and long-video understanding**. My long-term goal is to build an always-on real-world personal assistant with real-time perception, long-term memory, and continuous interaction. I am also interested in **agents**, unified models, and representation compression.
+    My research focuses on multimodal language models, particularly **streaming and long-video understanding**. My long-term goal is to build an always-on real-world personal assistant with real-time perception, long-term memory, and continuous interaction. I am also interested in agents, unified models, and representation compression.
 
     I am always open to collaboration—feel free to [get in touch](mailto:huangjianguo@sjtu.edu.cn) 😊
 - id: research
@@ -140,14 +140,10 @@
     - school: Shanghai Jiao Tong University
       logo: /images/education/sjtu-seal.png
       degree: Ph.D. Student in Computer Science and Technology
-      lab: IMVC Lab
-      lab_url: https://eit-imvclab.net/
       dates: "2025.09 – Present"
     - school: Dalian University of Technology
       logo: /images/education/dut-seal.svg
       degree: B.Eng. in Computer Science and Technology
-      lab: DUT-IR Lab
-      lab_url: https://ir.dlut.edu.cn/index.htm
       rank: Top 2.4%
       dates: "2021.09 – 2025.06"
 - id: award
